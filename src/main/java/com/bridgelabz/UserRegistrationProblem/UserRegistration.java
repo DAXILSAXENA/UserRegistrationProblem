@@ -36,11 +36,24 @@ public class UserRegistration {
 
 	public void verifyEmail() {
 		System.out.println("Enter Email ID:");
-		String Email = scan.next();
-		if (Email.matches("[A-Za-z0-9._+%-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,4}"))
+		String email = scan.next();
+		if (email.matches("[A-Za-z0-9._+%-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,4}"))
 			System.out.println("It is a valid Email ID");
 		else
 			System.out.println("It is an invalid Email ID");
+		System.out.println("\n");
+	}
+
+	// UC-4
+	// Function to verify Mobile Number and print whether it is valid or not:
+
+	public void verifyMobileNumber() {
+		System.out.println("Enter Mobile Number:");
+		String mobileNumber = scan.next();
+		if (mobileNumber.matches("^[0-9]{2}[-][0-9]{10}$") == true)
+			System.out.println("It is a valid Mobile Number");
+		else
+			System.out.println("It is an invalid Mobile Number");
 	}
 
 	public static void main(String[] args) {
@@ -50,6 +63,7 @@ public class UserRegistration {
 		object.verifyFirstName();
 		object.verifyLastName();
 		object.verifyEmail();
+		object.verifyMobileNumber();
 
 	}
 
