@@ -54,6 +54,19 @@ public class UserRegistration {
 			System.out.println("It is a valid Mobile Number");
 		else
 			System.out.println("It is an invalid Mobile Number");
+		System.out.println("\n");
+	}
+
+	// UC-5
+	// Function to verify if there are minimum 8 characters in password:
+
+	public void verifyPassword() {
+		System.out.println("Enter Password:");
+		String password = scan.next();
+		if (password.matches("[[a-zA-Z0-9!@#$%^&*]+]{8,}") == true)
+			System.out.println("It is a valid Password");
+		else
+			System.out.println("It is an invalid Password");
 	}
 
 	public static void main(String[] args) {
@@ -64,6 +77,7 @@ public class UserRegistration {
 		object.verifyLastName();
 		object.verifyEmail();
 		object.verifyMobileNumber();
+		object.verifyPassword();
 
 	}
 
