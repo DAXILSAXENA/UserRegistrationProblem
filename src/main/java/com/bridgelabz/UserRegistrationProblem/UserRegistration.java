@@ -59,11 +59,13 @@ public class UserRegistration {
 
 	// UC-5
 	// Function to verify if there are minimum 8 characters in password:
+	// UC-6
+	// Updated Function to verify if there is at least 1 Upper Case Character:
 
 	public void verifyPassword() {
 		System.out.println("Enter Password:");
 		String password = scan.next();
-		if (password.matches("[[a-zA-Z0-9!@#$%^&*]+]{8,}") == true)
+		if (password.matches("(?=.*[A-Z])[[a-zA-Z0-9!@#$%^&*]+]{8,}") == true)
 			System.out.println("It is a valid Password");
 		else
 			System.out.println("It is an invalid Password");
