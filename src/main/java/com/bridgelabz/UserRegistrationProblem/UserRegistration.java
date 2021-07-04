@@ -28,6 +28,19 @@ public class UserRegistration {
 			System.out.println("It is a valid Last Name");
 		else
 			System.out.println("It is an invalid Last Name");
+		System.out.println("\n");
+	}
+
+	// UC-3
+	// Function to verify Email and print whether it is valid or not:
+
+	public void verifyEmail() {
+		System.out.println("Enter Email ID:");
+		String Email = scan.next();
+		if (Email.matches("[A-Za-z0-9._+%-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,4}"))
+			System.out.println("It is a valid Email ID");
+		else
+			System.out.println("It is an invalid Email ID");
 	}
 
 	public static void main(String[] args) {
@@ -36,6 +49,8 @@ public class UserRegistration {
 		UserRegistration object = new UserRegistration();
 		object.verifyFirstName();
 		object.verifyLastName();
+		object.verifyEmail();
+
 	}
 
 }
