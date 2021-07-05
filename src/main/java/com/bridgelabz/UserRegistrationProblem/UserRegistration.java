@@ -63,11 +63,14 @@ public class UserRegistration {
 	// Updated Function to verify if there is at least 1 Upper Case Character:
 	// UC-7
 	// Updated Function to verify if there is at least 1 Numeric Character:
+	// UC-8
+	// Updated Function to verify if there is exact one special Character:
 
 	public void verifyPassword() {
 		System.out.println("Enter Password:");
 		String password = scan.next();
-		if (password.matches("(?=.*[A-Z])(?=.*[0-9])[[a-zA-Z0-9!@#$%^&*]+]{8,}") == true)
+		if (password.matches(
+				"(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=^[^!@#$%^&*]*[!@#$%^&*][^!@#$%^&*]*$)[a-zA-Z0-9!@#$%^&*]{8,}") == true)
 			System.out.println("It is a valid Password");
 		else
 			System.out.println("It is an invalid Password");
